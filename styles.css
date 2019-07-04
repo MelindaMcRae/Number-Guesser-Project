@@ -62,8 +62,7 @@ button {
 }
 
 .left-side {
-	border: solid 1px;
-	border-color: #BCBCBC;
+	border: #BCBCBC solid 2px;
 	display: flex;
 	flex-direction: column;
 	background-color: #F6F5F8;
@@ -78,6 +77,7 @@ button {
 	margin-bottom: 30px;
 	margin-right: 30px;
 	margin-left:30px;
+	border: #D0D2D3 solid 2px;
 }
 
 .forms {
@@ -173,7 +173,7 @@ button {
 }
 
 .cards {
-	border: #6e6e6e solid 2px;
+	border: #BCBCBC solid 2px;
 	height: 245px;
 	margin: 20px 50px;
 	background-color: #FFF;
