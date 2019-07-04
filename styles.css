@@ -21,7 +21,7 @@ h1 {
 	padding-top: 15px;
 }
 
-hr {
+.header-hr {
 	background-color: white;
 	height: 1px;
 	width: 624px;
@@ -176,8 +176,24 @@ button {
 	border: #6e6e6e solid 2px;
 	height: 245px;
 	margin: 20px 50px;
+	background-color: #FFF;
 
 }
 
+.card-top-hr {
+	background-color: #F6F5F8;
+	height: 3px;
+    width: 565px;
+    margin-top: 50px;
+    margin-left: 15px;
+    border: 0 none;
+}
 
-
+.card-bottom-hr {
+	background-color: #F6F5F8;
+	height: 3px;
+    width: 565px;
+    margin-top: 125px;
+    margin-left: 15px;
+    border: 0 none;
+}
