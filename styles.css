@@ -21,7 +21,7 @@ h1 {
 	padding-top: 15px;
 }
 
-hr {
+.header-hr {
 	background-color: white;
 	height: 1px;
 	width: 624px;
@@ -62,8 +62,7 @@ button {
 }
 
 .left-side {
-	border: solid 1px;
-	border-color: #BCBCBC;
+	border: #BCBCBC solid 2px;
 	display: flex;
 	flex-direction: column;
 	background-color: #F6F5F8;
@@ -78,6 +77,7 @@ button {
 	margin-bottom: 30px;
 	margin-right: 30px;
 	margin-left:30px;
+	border: #D0D2D3 solid 2px;
 }
 
 .forms {
@@ -172,7 +172,28 @@ button {
 	width:50%;
 }
 
+.cards {
+	border: #BCBCBC solid 2px;
+	height: 245px;
+	margin: 20px 50px;
+	background-color: #FFF;
 
+}
 
+.card-top-hr {
+	background-color: #F6F5F8;
+	height: 3px;
+    width: 565px;
+    margin-top: 50px;
+    margin-left: 15px;
+    border: 0 none;
+}
 
-
+.card-bottom-hr {
+	background-color: #F6F5F8;
+	height: 3px;
+    width: 565px;
+    margin-top: 125px;
+    margin-left: 15px;
+    border: 0 none;
+}
