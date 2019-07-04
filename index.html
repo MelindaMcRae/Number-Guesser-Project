@@ -11,7 +11,7 @@
 				<hr><h2>ULTIMATE CHALLENGER EDITION</h2>
 			</header>
 			<main>
-				<section id="left-side">
+				<section class="left-side">
 					<article class="left-art" id="set-range-art">
 					  <h3 class="left-title" id="set-range">Set Range</h3>
 						<div class="forms" id="range-forms">
@@ -20,42 +20,43 @@
 							  <input id="min-input" type="text">
 						  </form>
 						  <form class="range" id="max-range-form">
-							  <label>Max Range</label>
-							  <input type="text">
+							  <label id="max-range">Max Range</label>
+							  <input id="max-input" type="text">
 						  </form>
-						  <button>Update</button>
+						  <button id="update-button">Update</button>
 						</div>
 					</article>
-					<article class="left-art" id="challenger-box">
-					  <div>The Current Range is <strong>1</strong> to <strong>100</strong>
-						</div>
+					<article class="left-art" id="challenger-box"> 
+						<div>The Current Range is <strong>1</strong> to <strong>100</strong></div>
+						 <h3 class="left-title" id="challenger1"> Challenger 1</h3>
 						<div class="forms" id="challenger1-forms">
-						  <h3 class="left-title" id="challenger1"> Challenger 1</h3>
 						  <form class="challenger-input" id="challenger1-input">
-						    <label id="name-form">Name</label>
-						    <input type="text">
+						    <label class="name-form">Name</label>
+						    <input class="name-input" type="text">
 					    </form>
 						  <form class="challenger-input" id="guess2-input">
-						    <label id="name-form">Guess</label>
-						    <input type="text">
+						    <label class="guess-form">Guess</label>
+						    <input id="guess-input" type="text">
 					    </form>
 						</div>
+						<h3 class="left-title" id="challenger2"> Challenger 2</h3>
 						<div class="forms" id="challenger2-forms">
-						  <h3 class="left-title" id="challenger2"> Challenger 2</h3>
 						  <form class="challenger-input" id="challenger2-input">
-						    <label id="name-form">Name</label>
-						    <input type="text">
+						    <label class="name-form">Name</label>
+						    <input class="name-input" type="text">
 					    </form>
 						  <form class="challenger-input" id="guess2-input">
-						    <label id="name-form">Guess</label>
-						    <input type="text">
+						    <label class="guess-form">Guess</label>
+						    <input id="guess-input" type="text">
 					    </form>
 				    </div>
-				    <button class="challenger-buttons" id="submit">Submit Guess</button>
-				    <button class="challenger-buttons" id="reset">Reset Game</button>
-			      <button class="challenger-buttons" id="clear">Clear Game</button>
+				    <div class= "challenger-buttons-container">
+				    <button class="challenger-buttons" class="challenge-buttons">SUBMIT GUESS</button>
+				    <button class="challenger-buttons" class="challenge-buttons">RESET GAME</button>
+			      <button class="challenger-buttons" class="challenge-buttons">CLEAR GAME</button>
+			    </div>
 			    </article>
-			    <article class="bottom-art">
+			    <article class="left-art" id="bottom-art">
 				    <h3 class="left-title" id="score-title">Latest Score</h3>
 				    <div>
 					    <h4>Challenger 1 Name</h4>
@@ -72,9 +73,9 @@
 			    </article>
 		    </section>
 		    <section id="right-side"> 
-			    <article class="cards" id="top-card"></article>
-			    <article class="cards" id="middle-card"></article>
-			    <article class="cards" id="bottom-card"></article>
+			    <article class="cards" id="top-card">card1</article>
+			    <article class="cards" id="middle-card">card2</article>
+			    <article class="cards" id="bottom-card">card3</article>
 		    </section>
 		  </main>
 		</body>
