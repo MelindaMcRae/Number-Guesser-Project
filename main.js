@@ -11,3 +11,7 @@ function changeNumbers(e) {
 	minNumber.innerText = minInput.value;
 	maxNumber.innerText = maxInput.value;
 }
+
+function getRandom(minInput, maxInput) {
+  return Math.ceil(Math.random() * (maxInput - minInput) + minInput)
+}
