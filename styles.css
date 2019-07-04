@@ -172,7 +172,12 @@ button {
 	width:50%;
 }
 
+.cards {
+	border: #6e6e6e solid 2px;
+	height: 245px;
+	margin: 20px 50px;
 
+}
 
 
 
