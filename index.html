@@ -23,7 +23,7 @@
 							  <label id="max-range">Max Range</label>
 							  <input id="max-input" type="text">
 						  </form>
-						  <button id="update-button">Update</button>
+						  <button id="update-button">UPDATE</button>
 						</div>
 					</article>
 					<article class="left-art" id="challenger-box"> 
@@ -36,7 +36,7 @@
 					    </form>
 						  <form class="challenger-input" id="guess2-input">
 						    <label class="guess-form">Guess</label>
-						    <input id="guess-input" type="text">
+						    <input class="guess-input" type="text">
 					    </form>
 						</div>
 						<h3 class="left-title" id="challenger2"> Challenger 2</h3>
@@ -47,7 +47,7 @@
 					    </form>
 						  <form class="challenger-input" id="guess2-input">
 						    <label class="guess-form">Guess</label>
-						    <input id="guess-input" type="text">
+						    <input class="guess-input" type="text">
 					    </form>
 				    </div>
 				    <div class= "challenger-buttons-container">
@@ -58,17 +58,20 @@
 			    </article>
 			    <article class="left-art" id="bottom-art">
 				    <h3 class="left-title" id="score-title">Latest Score</h3>
-				    <div>
-					    <h4>Challenger 1 Name</h4>
-						  <p>current guess</p>
-						  <strong class="score-number" id="challenger1-score">#</strong>
-						  <p class="feedback" id="challenger1-feedback"></p>
-				    </div>
-				    <div>
-					    <h4>Challenger 2 Name</h4>
-					    <p>current guess</p>
-					    <strong class="score-number" id="challenger2-score">#</strong>
-					    <p class="feedback" id="challenger2-feedback"></p>
+				    <div id="bottom-left-container">
+				    	<section id="bottom-left-container-1">
+					      <h4>Challenger 1 Name</h4>
+						    <p>current guess</p>
+						    <strong class="score-number" id="challenger1-score">#</strong>
+						    <p class="feedback" id="challenger1-feedback">that's too low</p>
+						 </section>
+						 <section id="bottom-left-container-2">
+					      <h4>Challenger 2 Name</h4>
+					      <p>current guess</p>
+					      <strong class="score-number" id="challenger2-score">#</strong>
+					      <p class="feedback" id="challenger2-feedback">that's too high</p>
+					   </section>
+					  </div>
 				    </div>
 			    </article>
 		    </section>
