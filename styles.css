@@ -36,3 +36,11 @@ h2 {
 	top: 94px;
 	background-color: #404041;
 }
+
+main {
+	
+}
+
+#left-side {
+	display: flex;
+}
