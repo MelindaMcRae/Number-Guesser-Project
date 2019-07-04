@@ -16,32 +16,39 @@ function changeNumbers(e) {
 
 // random value generated
 function getRandom(minInput, maxInput) {
-  return Math.ceil(Math.random() * (maxInput - minInput) + minInput)
+  console.log(minInput, maxInput, "input") 
+  return Math.ceil(Math.random() * (maxInput.value - minInput.value) + minInput.value)
 }
 
 // var getRandom = math.ceil(Math.random() * (maxInput - minInput) + minInput)
 
 var submitButton = document.querySelector("#submit-button");
 
-var guessInput1 = document.getElementById("guess-input-1").value;
+var guessInput1 = document.getElementById("guess-input-1");
 var guessInput2 = document.getElementById("guess-input-2").value;
 
 submitButton.addEventListener("click", displayGuessResults);
 
 function displayGuessResults() {
-	if (guessInput1 == getRandom) 
+console.log(guessInput1.value, getRandom(minInput, maxInput))
+var randomNumber = getRandom(minInput, maxInput
+	)	
+if (guessInput1.value == randomNumber) 
 	{
-		alert("BOOM");
+		alert("BOOM")
+		return;
 	}
 
-	else if (guessInput1 > getRandom)
+	else if (guessInput1.value > randomNumber)
 	{
-		alert("that's too high");
+		alert("that's too high")
+		return;
 	}
 
-	else (guessInput1 < getRandom)
+	else (guessInput1.value < randomNumber)
 	{
-		alert("that's too low");
+		alert("that's too low")
+		return;
 	}
 }
 
