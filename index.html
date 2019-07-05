@@ -16,12 +16,12 @@
 					  <h3 class="left-title" id="set-range">Set Range</h3>
 						<div class="forms" id="range-forms">
 						  <form class="range" id="min-range-form">
-							  <label id="min-range">Min Range</label>
-							  <input id="min-input" type="text">
+							  <label for="min-range">Min Range</label>
+							  <input id="min-input" type="number">
 						  </form>
 						  <form class="range" id="max-range-form">
 							  <label id="max-range">Max Range</label>
-							  <input id="max-input" type="text">
+							  <input id="max-input" type="number">
 						  </form>
 						  <button id="update-button">UPDATE</button>
 						</div>
@@ -34,9 +34,9 @@
 						    <label class="name-form">Name</label>
 						    <input class="name-input" type="text">
 					    </form>
-						  <form class="challenger-input" id="guess2-input">
+						  <form class="challenger-input" id="guess1-form">
 						    <label class="guess-form">Guess</label>
-						    <input class="guess-input" type="text">
+						    <input class="guess-input" id="guess-input-1" type="text">
 					    </form>
 						</div>
 						<h3 class="left-title" id="challenger2"> Challenger 2</h3>
@@ -45,15 +45,15 @@
 						    <label class="name-form">Name</label>
 						    <input class="name-input" type="text">
 					    </form>
-						  <form class="challenger-input" id="guess2-input">
+						  <form class="challenger-input" id="guess2-form">
 						    <label class="guess-form">Guess</label>
-						    <input class="guess-input" type="text">
+						    <input class="guess-input" id="guess-input-2"type="text">
 					    </form>
 				    </div>
 				    <div class= "challenger-buttons-container">
-				    <button class="challenger-buttons" class="challenge-buttons">SUBMIT GUESS</button>
-				    <button class="challenger-buttons" class="challenge-buttons">RESET GAME</button>
-			      <button class="challenger-buttons" class="challenge-buttons">CLEAR GAME</button>
+				    <button type="submit" class="challenger-buttons" id="submit-button">SUBMIT GUESS</button>
+				    <button type="reset" class="challenger-buttons" id="reset-button">RESET GAME</button>
+			      <button class="challenger-buttons" id="clear-button">CLEAR GAME</button>
 			    </div>
 			    </article>
 			    <article class="left-art" id="bottom-art">
@@ -93,6 +93,6 @@
 				</article>
 		    </section>
 		  </main>
-		  <script src=main.js></script>
+		  <script src="number-test.js"></script>
 		</body>
 	</html>
