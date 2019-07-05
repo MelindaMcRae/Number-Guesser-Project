@@ -7,8 +7,13 @@
 document.getElementById("update-button").addEventListener("click", ()=>{
     var minRange = getMinRange()
     var maxRange = getMaxRange()
+    var min = minRange
+    var max = maxRange
+    var randomNumber = getRandomNumber(min, max)
+    console.log(randomNumber)
     setMaxRangeElement(maxRange)
     setMinRangeElement(minRange)
+    
 })
 
 //Submit Button Trigger
@@ -37,9 +42,12 @@ document.getElementById("clear-button").addEventListener("click", ()=>{
 
 /**************** Actions/Funtions **************/
 
-
+function getRandomNumber(min, max) {
+    return Math.ceil(Math.random() * (max - min));
+}
 
 /******************** HTML/DOM ******************/
+
 function getMinRange(){
     console.log("minRangeRan")
    var minRangeElement = document.querySelector("#min-input")
