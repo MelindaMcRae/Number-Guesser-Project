@@ -5,24 +5,22 @@
  
 //Update Button Trigger
 document.getElementById("update-button").addEventListener("click", ()=>{
-        console.log("i ran")
     var minRange = getMinRange()
-        console.log(minRange)
     var maxRange = getMaxRange()
-        console.log(maxRange)
     setMaxRangeElement(maxRange)
     setMinRangeElement(minRange)
 })
 
 //Submit Button Trigger
     document.getElementById("submit-button").addEventListener("click", ()=>{
-        console.log("submit ran")
     var name1 = getName1()
-        console.log(name1)
     setName1(name1)
-        console.log("setName ran")
     var name2 = getName2()
     setName2(name2)
+    var guess1 = getGuess1()
+    setGuess1(guess1)
+    var guess2 = getGuess2()
+    setGuess2(guess2)
 })
 
 //Reset Button Trigger
@@ -74,17 +72,12 @@ function setMinRangeElement(minRangeVal) {
 }
 
 function getName1() {
-        console.log("Get name ran")
     var name1Element = document.querySelector("#nameform1")
-        console.log("name form 1")
     var name1ElementValue = name1Element.value
     return name1ElementValue
-        console.log("name value ran")
 }
 
 function setName1(setName1Val) {
-    console.log("set name 1 ran")
-    console.log(setName1Val)
     var name1Label = document.querySelector("#name-1-input")
     name1Label.innerText = setName1Val
 }
@@ -97,6 +90,27 @@ function getName2() {
 
 function setName2(setName2Val) {
     var name2Label = document.querySelector("#name-2-input")
-    name2Label.innerText = setName2Val
-    
+    name2Label.innerText = setName2Val   
+}
+
+function getGuess1() {
+    var guess1Element = document.querySelector("#guess-input-1")
+    var guess1ElementValue = guess1Element.value
+    return guess1ElementValue
+}
+
+function setGuess1(setGuess1Val) {
+    var guess1Label = document.querySelector("#challenger1-score")
+    guess1Label.innerText = setGuess1Val
+}
+
+function getGuess2() {
+    var guess2Element = document.querySelector("#guess-input-2")
+    var guess2ElementValue = guess2Element.value
+    return guess2ElementValue
+}
+
+function setGuess2(setGuess2Val) {
+    var guess2Label = document.querySelector("#challenger2-score")
+    guess2Label.innerText = setGuess2Val
 }
