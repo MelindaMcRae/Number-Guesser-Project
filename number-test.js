@@ -5,18 +5,27 @@
  
 //Update Button Trigger
 document.getElementById("update-button").addEventListener("click", ()=>{
-    console.log("i ran")
     var minRange = getMinRange()
-    console.log(minRange)
     var maxRange = getMaxRange()
-    console.log(maxRange)
+    var min = minRange
+    var max = maxRange
+    var randomNumber = getRandomNumber(min, max)
+    console.log(randomNumber)
     setMaxRangeElement(maxRange)
     setMinRangeElement(minRange)
+    
 })
 
 //Submit Button Trigger
-document.getElementById("submit-button").addEventListener("click", ()=>{
-    console.log("submit ran")
+    document.getElementById("submit-button").addEventListener("click", ()=>{
+    var name1 = getName1()
+    setName1(name1)
+    var name2 = getName2()
+    setName2(name2)
+    var guess1 = getGuess1()
+    setGuess1(guess1)
+    var guess2 = getGuess2()
+    setGuess2(guess2)
 })
 
 //Reset Button Trigger
@@ -33,9 +42,12 @@ document.getElementById("clear-button").addEventListener("click", ()=>{
 
 /**************** Actions/Funtions **************/
 
-
+function getRandomNumber(min, max) {
+    return Math.ceil(Math.random() * (max - min));
+}
 
 /******************** HTML/DOM ******************/
+
 function getMinRange(){
     console.log("minRangeRan")
    var minRangeElement = document.querySelector("#min-input")
@@ -60,10 +72,53 @@ function setMaxRangeElement(maxRangeVal) {
 }
 
 function setMinRangeElement(minRangeVal) {
-    console.log("min range val ran")
-    console.log(minRangeVal)
+        console.log("min range val ran")
+        console.log(minRangeVal)
     var minRangeLabel = document.querySelector("#min-number")
-    console.log(typeof minRangeLabel, minRangeLabel)
+        console.log(typeof minRangeLabel, minRangeLabel)
     minRangeLabel.innerText = minRangeVal
 }
 
+function getName1() {
+    var name1Element = document.querySelector("#nameform1")
+    var name1ElementValue = name1Element.value
+    return name1ElementValue
+}
+
+function setName1(setName1Val) {
+    var name1Label = document.querySelector("#name-1-input")
+    name1Label.innerText = setName1Val
+}
+
+function getName2() {
+    var name2Element = document.querySelector("#nameform2")
+    var name2ElementValue = name2Element.value
+    return name2ElementValue
+}
+
+function setName2(setName2Val) {
+    var name2Label = document.querySelector("#name-2-input")
+    name2Label.innerText = setName2Val   
+}
+
+function getGuess1() {
+    var guess1Element = document.querySelector("#guess-input-1")
+    var guess1ElementValue = guess1Element.value
+    return guess1ElementValue
+}
+
+function setGuess1(setGuess1Val) {
+    var guess1Label = document.querySelector("#challenger1-score")
+    guess1Label.innerText = setGuess1Val
+}
+
+function getGuess2() {
+    var guess2Element = document.querySelector("#guess-input-2")
+    var guess2ElementValue = guess2Element.value
+    return guess2ElementValue
+}
+
+function setGuess2(setGuess2Val) {
+    var guess2Label = document.querySelector("#challenger2-score")
+    guess2Label.innerText = setGuess2Val
+}
