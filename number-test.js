@@ -64,23 +64,13 @@ document.getElementById("clear-button").addEventListener("click", ()=>{
 })
 
 //On Form Change
-var allChallengerInputs = document.querySelectorAll(".all-challenger-inputs")
+var allChallengerInputs = document.querySelectorAll(".challenger-inputs")
 allChallengerInputs.forEach(challengerInput => {
     challengerInput.addEventListener("change",()=>{
         console.log(challengerInput)
-	checkIfWeShouldEnableTheSubmitButton()
-	checkIfWeShouldEnableTheClearButton()
+    checkIfWeShouldEnableTheSubmitButton()
     })
 })
-
-var allRangeInputs = document.querySelectorAll(".all-range-inputs")
-allRangeInputs.forEach(rangeInput => {
-	console.log("thisisrunning")
-	rangeInput.addEventListener("change",()=>{
-		checkIfWeShouldEnableTheUpdateButton()
-	})
-})
-
 
 /**************** Actions/Funtions **************/
 
@@ -118,42 +108,16 @@ function checkIfWeShouldEnableTheSubmitButton() {
     console.log(name, guess1)
     if  (name != "" && guess1 != ""){
         console.log("I should be enabled")
-        enableOrDisableSubmitButton(true)
+        enableOrDisableButton(true)
     } else if (name2 != "" && guess2 != ""){
         console.log("it should enableeeee")
-        enableOrDisableSubmitButton(true)
+        enableOrDisableButton(true)
     } else {
         console.log ("I should be disabled")
-        enableOrDisableSubmitButton(false)
-	}}
+        enableOrDisableButton(false)
+    }
 
-function checkIfWeShouldEnableTheClearButton(){
-	var minField = getMinRange();
-	var maxField = getMaxRange();
-	var name = getName1();
-    var name2 = getName2()
-    var guess1 = getGuess1()
-	var guess2 = getGuess2()
-	if (name > "" || name2 > "" || guess1> "" || guess2 > "" || minField > "" || maxField > "") {
-		enableorDisableClearButton(true)
-	} else {
-		enableOrDisableClearButton(false)
-	}
 }
-	
-function checkIfWeShouldEnableTheUpdateButton(){
-	console.log("check if update button enable ran")
-	var minField = getMinRange();
-	var maxField = getMaxRange();
-	if (minField != "" && maxField != ""){
-		enableOrDisableUpdateButton(true)
-	} else {
-		enableOrDisableUpdateButton(false)
-	}
-}
-
-
-
 /******************** HTML/DOM ******************/
 
 // Minimum Ranges, Top Left Box 
@@ -188,35 +152,18 @@ function setMaxRangeElement(maxRangeVal) {
     maxRangeLabel.innerText = maxRangeVal
 }
 
-// Submit Button disabler
-function submitButtonEnable() {
+// Update Button disabler
+function buttonEnable() {
     console.log("Ran Button Enable")
     if(document.querySelector("#nameform1").value.length===0) { 
       document.querySelector("#submit-button").disabled = true; 
       } else { 
         document.querySelector("#submit-button").disabled = false;
-      }}
-
-// Update Button disabler
-function updateButtonEnable(){
-	if(document.querySelector("#min-input").value.length===0) {
-		document.quertySelector("#update-button").disabled = true;
-	} else {
-		document.querySelector("#update-button").disabled = false;
-	}
-}
-
-//Clear Button disabler
-function clearButtonEnable () {
-	if(document.querySelector("input").value).length === 0 {
-		document.querySelector("#clear-button").disabled = true; 
-		} else {
-			document.querySelector("#clear-button").disabled = false;
-		}
-	}
+      }
 }
 
 // Name Input Challenger 1
+
 
 function getName1() {
     var name1Element = document.querySelector("#nameform1")
@@ -266,34 +213,15 @@ function setGuess2(setGuess2Val) {
     guess2Label.innerText = setGuess2Val;
 }
 
-function enableOrDisableSubmitButton(submitButtonShouldBeDisabled) {
+function enableOrDisableButton(buttonShouldBeDisabled) {
     console.log("enable or disable ran")
     var submitGuessButtonElement = document.querySelector("#submit-button")
     console.log(submitGuessButtonElement)
-    if (submitButtonShouldBeDisabled == true) {
+    if (buttonShouldBeDisabled == true) {
         submitGuessButtonElement.disabled = false
     } else {
         submitGuessButtonElement.disabled = true
     }
-}
-
-function enableOrDisableUpdateButton(updateButtonShouldBeDisabled) {
-	console.log("update disable ran")
-	var updateButtonElement = document.querySelector("#update-button")
-	if (updateButtonShouldBeDisabled == true) {
-		updateButtonElement.disabled = false
-	} else {
-		submitButtonElement.disabled = true
-	}
-}
-
-function enableOrDisableClearButton(clearButtonShouldBeDisabled) {
-	var clearButtonShouldBeDisabled = document.querySelsector("clear-button")
-	if (clearButtonShouldBeDisabled == true) {
-		updateButtonElement.disabled = false
-	} else {
-		updateButtonElement.disabled = true
-	}
 }
 
 
@@ -331,4 +259,3 @@ function setCard3Name2(setCard3Name2Val) {
     var card3Name2Label = document.querySelector("#card3-name-2")
     card3Name2Label.innerText = setCard3Name2Val
 }
- 
