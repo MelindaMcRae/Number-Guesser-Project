@@ -178,7 +178,7 @@ button {
 }
 
 #submit-button[disabled] {
-color:red;
+  background-color: #D0D2D3;
 }
 
 /**********RIGHT SIDE*********/
