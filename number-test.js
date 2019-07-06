@@ -24,6 +24,24 @@ document.getElementById("submit-button").addEventListener("click", ()=>{
     setGuess1(guess1)
     var guess2 = getGuess2()
     setGuess2(guess2)
+
+    //card one result changes
+    var name1Card1 = getName1()
+    setCard1Name1(name1Card1)
+    var name2Card1 = getName2()
+    setCard1Name2(name2Card1)
+
+    // //card two result changes
+    // var name1Card2 = getName1()
+    // setCard2Name1(name1Card2)
+    // var name2Card2 = getName2()
+    // setCard2Name2(name2Card2)
+
+    //card threee result changes
+    var name1Card3 = getName1()
+    setCard3Name1(name1Card3)
+    var name2Card3 = getName2()
+    setCard3Name2(name2Card3)
 })
 
 //Reset Button Trigger
@@ -72,6 +90,7 @@ var randomNumber = getRandom(minInput, maxInput)
 		return;
     }
 }
+console.log(getRandom)
 
 function checkIfWeShouldEnableTheSubmitButton() {
     var name = getName1();
@@ -135,6 +154,8 @@ function setMaxRangeElement(maxRangeVal) {
 }
 
 // Name Input Challenger 1
+
+
 function getName1() {
     var name1Element = document.querySelector("#nameform1")
     var name1ElementValue = name1Element.value
@@ -194,3 +215,38 @@ function enableOrDisableButton(buttonShouldBeDisabled) {
     }
 }
 
+
+/****************RIGHT SIDE CARDS*********************/
+
+//Card One
+function setCard1Name1(setCard1Name1Val) {
+    var card1Name1Label = document.querySelector("#card1-name-1")
+    card1Name1Label.innerText = setCard1Name1Val
+}
+
+function setCard1Name2(setCard1Name2Val) {
+    var card1Name2Label = document.querySelector("#card1-name-2")
+    card1Name2Label.innerText = setCard1Name2Val
+}
+
+//Card Two
+// function setCard2Name1(setCard2Name1Val) {
+//     var card2Name1Label = document.querySelector("#card2-name-1")
+//     card2Name1Label.innerText = setCard2Name1Val
+// }
+
+// function setCard1Name2(setCard2Name2Val) {
+//     var card2Name2Label = document.querySelector("#card2-name-2")
+//     card2Name2Label.innerText = setCard2Name2Val
+// }
+
+//Card Three
+function setCard3Name1(setCard3Name1Val) {
+    var card3Name1Label = document.querySelector("#card3-name-1")
+    card3Name1Label.innerText = setCard3Name1Val
+}
+
+function setCard3Name2(setCard3Name2Val) {
+    var card3Name2Label = document.querySelector("#card3-name-2")
+    card3Name2Label.innerText = setCard3Name2Val
+}
