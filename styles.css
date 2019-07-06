@@ -177,6 +177,10 @@ button {
 	font-size: 25px
 }
 
+#submit-button[disabled] {
+color:red;
+}
+
 /**********RIGHT SIDE*********/
 
 #right-side {
