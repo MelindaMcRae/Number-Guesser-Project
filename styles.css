@@ -73,8 +73,8 @@ button {
 
 .left-art {
 	background-color: #FFFFFF;
-	padding: 35px;
-	margin-bottom: 30px;
+	padding: 10px 35px 25px 20px;;
+	margin-bottom: 20px;
 	margin-right: 30px;
 	margin-left:30px;
 	border: #D0D2D3 solid 2px;
@@ -165,6 +165,18 @@ button {
 	align-items: center;
 }
 
+#challenger1-score,
+#challenger2-score {
+	color: #DD1972;
+	font-weight: 700;
+	font-size: 90px;
+}
+
+#challenger1-feedback,
+#challenger2-feedback {
+	font-size: 25px
+}
+
 /**********RIGHT SIDE*********/
 
 #right-side {
@@ -184,7 +196,6 @@ button {
 	background-color: #F6F5F8;
 	height: 3px;
     width: 565px;
-    margin-top: 50px;
     margin-left: 15px;
     border: 0 none;
 }
@@ -193,7 +204,55 @@ button {
 	background-color: #F6F5F8;
 	height: 3px;
     width: 565px;
-    margin-top: 125px;
+    margin-top: 20px;
     margin-left: 15px;
     border: 0 none;
 }
+
+.vs-title {
+	font-size: 18px;
+	font-weight: 300;
+	height: 30px;
+	margin: 15px 0px 0px 70px;
+}
+ 
+ #name-1-input,
+ #name-2-input {
+ 	padding: 0 10px;
+ }
+
+ #winner-name-1,
+ #winner-name-2,
+ #winner-name-3 {
+ 	font-size: 35px;
+ 	font-weight: 700;
+ 	text-align: center;
+ 	margin-top: 25px;
+ }
+
+ #winner-tag {
+ 	font-size: 35px;
+ 	text-align: center;
+ }
+
+ #num-of-guesses,
+ #num-of-minutes {
+ 	display: inline-block;
+ 	font-size: 20px;
+ 	margin-top: 13px;
+ }
+
+ #num-of-guesses {
+ 	margin-left: 25px;
+ }
+
+  #num-of-minutes {
+ 	margin-left: 130px;
+ }
+
+ #close-btn {
+ 	margin-left: 170px;
+ 	border-radius: 50%;
+ 	font-size: 17px;
+ 	color: #D0D2D3;
+ }
