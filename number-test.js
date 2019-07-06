@@ -1,16 +1,23 @@
 /************* Global Variables/Auto-Execute*****/
-
-
+// var submitButton = document.querySelector("#submit-button");
+// var guessInput1 = document.getElementById("guess-input-1");
+// var guessInput2 = document.getElementById("guess-input-2").value;
+// var minInput = document.querySelector("#min-input");
+// var maxInput = document.querySelector("#max-input");
+// var updateButton = document.querySelector("#update-button");
+// var minNumber = document.querySelector("#min-number");
+// var maxNumber = document.querySelector("#max-number");
+var global_RandomNumber;
 /*************** Triggers/Event Clicks **********/
  
 //Update Button Trigger
 document.getElementById("update-button").addEventListener("click", ()=>{
     var minRange = getMinRange()
     var maxRange = getMaxRange()
-    var randomNumber = getRandomNumber()
-    console.log(randomNumber)
     setMaxRangeElement(maxRange)
     setMinRangeElement(minRange)
+    global_RandomNumber = getRandom(minRange, maxRange)
+    console.log(global_RandomNumber)
     // buttonEnable()
 })
 
@@ -42,55 +49,57 @@ document.getElementById("submit-button").addEventListener("click", ()=>{
     setCard3Name1(name1Card3)
     var name2Card3 = getName2()
     setCard3Name2(name2Card3)
+    var maxRangeLabel = document.querySelector("#max-number")
+    var minRangeLabel = document.querySelector("#min-number")
+    console.log("get random ran")
+    displayGuessResults(guess1, guess2)
 })
 
 //Reset Button Trigger
 document.getElementById("reset-button").addEventListener("click", ()=>{
-    console.log("reset ran")
 })
 
 //Clear Button Trigger
 document.getElementById("clear-button").addEventListener("click", ()=>{
-    console.log("clear ran")
 })
 
 //On Form Change
 var allChallengerInputs = document.querySelectorAll(".challenge-inputs")
-console.log(typeof allChallengerInputs, allChallengerInputs)
 allChallengerInputs.forEach(challengerInput => {
     challengerInput.addEventListener("change",()=>{
+        console.log(challengerInput)
     checkIfWeShouldEnableTheSubmitButton()
     })
-    console.log(challengerInput)
-
 })
 
 /**************** Actions/Funtions **************/
 
-function getRandomNumber(min, max) {
-    // var min = minRange
-    // var max = maxRange
-    return Math.ceil(Math.random() * (max - min));
-}
+function getRandom(minInput, maxInput) {
+    console.log(minInput, maxInput, "input") 
+    return Math.ceil(Math.random() * (maxInput - minInput) + minInput)
+}  
+  
 
-function getRandom(minInput, maxInput){
-var randomNumber = getRandom(minInput, maxInput)	
-    if (guessInput1.value == randomNumber) {
-		alert("BOOM")
-		return;
+function displayGuessResults(guess1, guess2) {
+    console.log(guess1, guess2)	
+    if (guess1 == global_RandomNumber) 
+        {
+            alert("BOOM")
+            return;
+        }
+    
+        else if (guess1 > global_RandomNumber)
+        {
+            alert("that's too high")
+            return;
+        }
+    
+        else (guess1 < global_RandomNumber)
+        {
+            alert("that's too low")
+            return;
+        }
     }
-	else if (guessInput1.value > randomNumber)
-	{
-		alert("that's too high")
-		return;
-	}
-	else (guessInput1.value < randomNumber)
-	{
-		alert("that's too low")
-		return;
-    }
-}
-console.log(getRandom)
 
 function checkIfWeShouldEnableTheSubmitButton() {
     var name = getName1();
@@ -122,7 +131,10 @@ function getMinRange(){
 }
 
 function setMinRangeElement(minRangeVal) {
+    console.log ("min range ran element")
+    console.log(minRangeVal)
 var minRangeLabel = document.querySelector("#min-number")
+console.log(typeof minRangeLabel, minRangeLabel)
 minRangeLabel.innerText = minRangeVal
 }
 
@@ -130,9 +142,16 @@ minRangeLabel.innerText = minRangeVal
 function getMaxRange(){
     console.log("max Range Ran")
     var maxRangeElement = document.querySelector("#max-input")
- 
     var maxRangeElementValue = maxRangeElement.value
     return maxRangeElementValue
+}
+
+function setMaxRangeElement(maxRangeVal) {
+    console.log("setMaxRangeElement Ran")
+    console.log(maxRangeVal)
+    var maxRangeLabel = document.querySelector("#max-number")
+    console.log(typeof maxRangeLabel, maxRangeLabel)
+    maxRangeLabel.innerText = maxRangeVal
 }
 
 // Update Button disabler
@@ -143,14 +162,6 @@ function buttonEnable() {
       } else { 
         document.querySelector("#submit-button").disabled = false;
       }
-}
-
-function setMaxRangeElement(maxRangeVal) {
-    console.log("setMaxRangeElement Ran")
-    console.log(maxRangeVal)
-    var maxRangeLabel = document.querySelector("#max-number")
-    console.log(typeof maxRangeLabel, maxRangeLabel)
-    maxRangeLabel.innerText = maxRangeVal
 }
 
 // Name Input Challenger 1
