@@ -17,13 +17,13 @@
 						<div class="forms" id="range-forms">
 						  <form class="range" id="min-range-form">
 							  <label for="min-range">Min Range</label>
-							  <input id="min-input" type="number">
+							  <input class="all-range-inputs" id="min-input" type="number">
 						  </form>
 						  <form class="range" id="max-range-form">
 							  <label id="max-range">Max Range</label>
-							  <input id="max-input" type="number">
+							  <input class="all-range-inputs" id="max-input" type="number">
 						  </form>
-						  <button id="update-button">UPDATE</button>
+						  <button id="update-button" disabled>UPDATE</button>
 						</div>
 					</article>
 					<article class="left-art" id="challenger-box"> 
@@ -51,9 +51,9 @@
 					    </form>
 				    </div>
 				    <div class= "challenger-buttons-container">
-				    <button type="submit" class="challenger-buttons" id="submit-button">SUBMIT GUESS</button>
-				    <button type="reset" class="challenger-buttons" id="reset-button">RESET GAME</button>
-			      <button class="challenger-buttons" id="clear-button">CLEAR GAME</button>
+				    <button type="submit" class="challenger-buttons" id="submit-button" disabled>SUBMIT GUESS</button>
+				    <button type="reset" class="challenger-buttons" id="reset-button" disabled>RESET GAME</button>
+			      <button class="challenger-buttons" id="clear-button" disabled>CLEAR GAME</button>
 			    </div>
 			    </article>
 			    <article class="left-art" id="bottom-art">

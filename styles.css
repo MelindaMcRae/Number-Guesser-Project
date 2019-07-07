@@ -112,11 +112,13 @@ button {
 
 /**********MIDDLE LEFT BOX*******/
 
-.name-input {
+#nameform1,
+#nameform2 {
 	width: 330px;
 }
 
-.guess-input {
+#guess-input-1,
+#guess-input-2 {
 	width: 150px;
 }
 
@@ -177,8 +179,11 @@ button {
 	font-size: 25px
 }
 
-#submit-button[disabled] {
-color:red;
+#update-button[disabled],
+#submit-button[disabled],
+#reset-button[disabled],
+#clear-button[disabled] {
+  background-color: #D0D2D3;
 }
 
 /**********RIGHT SIDE*********/
