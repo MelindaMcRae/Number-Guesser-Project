@@ -127,19 +127,18 @@ function checkIfWeShouldEnableTheSubmitButton() {
         enableOrDisableSubmitButton(false)
 	}}
 
-function checkIfWeShouldEnableTheClearButton(){
-	var minField = getMinRange();
-	var maxField = getMaxRange();
+function checkIfWeShouldEnableTheClearButton() {
+	console.log("check if we should enable clear button working")
 	var name = getName1();
     var name2 = getName2()
     var guess1 = getGuess1()
 	var guess2 = getGuess2()
-	if (name > "" || name2 > "" || guess1> "" || guess2 > "" || minField > "" || maxField > "") {
-		enableorDisableClearButton(true)
+	if (name != "" || name2 != "" || guess1 != "" || guess2 != ""){ 
+		enableOrDisableClearButton(true)
 	} else {
 		enableOrDisableClearButton(false)
-	}
-}
+	}}
+
 	
 function checkIfWeShouldEnableTheUpdateButton(){
 	console.log("check if update button enable ran")
@@ -208,13 +207,13 @@ function updateButtonEnable(){
 
 //Clear Button disabler
 function clearButtonEnable () {
-	if(document.querySelector("input").value).length === 0 {
+	if(document.querySelector("input").value.length != 0) {
 		document.querySelector("#clear-button").disabled = true; 
 		} else {
 			document.querySelector("#clear-button").disabled = false;
 		}
 	}
-}
+
 
 // Name Input Challenger 1
 
@@ -283,16 +282,17 @@ function enableOrDisableUpdateButton(updateButtonShouldBeDisabled) {
 	if (updateButtonShouldBeDisabled == true) {
 		updateButtonElement.disabled = false
 	} else {
-		submitButtonElement.disabled = true
+		updateButtonElement.disabled = true
 	}
 }
 
 function enableOrDisableClearButton(clearButtonShouldBeDisabled) {
-	var clearButtonShouldBeDisabled = document.querySelsector("clear-button")
+	console.log("enable or disable function working")
+	var clearButtonElement = document.querySelector("#clear-button")
 	if (clearButtonShouldBeDisabled == true) {
-		updateButtonElement.disabled = false
+		clearButtonElement.disabled = false
 	} else {
-		updateButtonElement.disabled = true
+		clearButtonElement.disabled = true
 	}
 }
 
