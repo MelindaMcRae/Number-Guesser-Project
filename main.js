@@ -31,8 +31,7 @@ submitButton.addEventListener("click", displayGuessResults);
 
 function displayGuessResults() {
 console.log(guessInput1.value, getRandom(minInput, maxInput))
-var randomNumber = getRandom(minInput, maxInput
-	)	
+var randomNumber = getRandom(minInput, maxInput)	
 if (guessInput1.value == randomNumber) 
 	{
 		alert("BOOM")

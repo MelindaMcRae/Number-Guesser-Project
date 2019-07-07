@@ -32,22 +32,22 @@
 						<div class="forms" id="challenger1-forms">
 						  <form class="challenger-input" id="challenger1-input">
 						    <label class="name-form">Name</label>
-						    <input id="nameform1" class="name-input" type="text">
+						    <input class="all-challenger-inputs" id="nameform1" class="name-input" type="text">
 					    </form>
 						  <form class="challenger-input" id="guess1-form">
 						    <label class="guess-form">Guess</label>
-						    <input class="guess-input" id="guess-input-1" type="number">
+						    <input class="all-challenger-inputs" class="guess-input" id="guess-input-1" type="number">
 					    </form>
 						</div>
-						<h3 class="left-title" id="challenger2"> Challenger 2</h3>
+						<h3 class="challenger-inputs" class="left-title" id="challenger2"> Challenger 2</h3>
 						<div class="forms" id="challenger2-forms">
-						  <form class="challenger-input" id="challenger2-input">
+						  <form class="challenger-inputs" id="challenger2-input">
 						    <label class="name-form">Name</label>
-						    <input id="nameform2" class="name-input" type="text">
+						    <input class="all-challengers-inputs" id="nameform2" class="name-input" type="text">
 					    </form>
-						  <form class="challenger-input" id="guess2-form">
+						  <form class="challenge-input" id="guess2-form">
 						    <label class="guess-form">Guess</label>
-						    <input class="guess-input" id="guess-input-2"type="number">
+						    <input class="all-challenger-inputs" class="guess-input" id="guess-input-2"type="number">
 					    </form>
 				    </div>
 				    <div class= "challenger-buttons-container">
@@ -77,7 +77,7 @@
 		    </section>
 		    <section id="right-side"> 
 			    <article class="cards" id="top-card">
-			    	<h4 class="vs-title"><strong id= "name-1-input">CHALLENGER 1 NAME</strong> vs <strong id="name-2-input">CHALLENGER 2 NAME</strong></h4>
+			    	<h4 class="vs-title"><strong id= "card1-name-1">CHALLENGER 1 NAME</strong> vs <strong id="card1-name-2">CHALLENGER 2 NAME</strong></h4>
 			    	<hr class="card-top-hr">
 			    	<div id="winner-name-1">CHALLENGER 1 NAME</div>
 			    	<p id="winner-tag">WINNER</p>
@@ -87,7 +87,7 @@
 			    	<button id="close-btn">X</button>
 			    </article>
 			    <article class="cards" id="middle-card">
-			    	<h4 class="vs-title"><strong id= "name-1-input">CHALLENGER 1 NAME</strong> vs <strong id="name-2-input">CHALLENGER 2 NAME</strong></h4>
+			    	<h4 class="vs-title"><strong id= "card2-name-1">CHALLENGER 1 NAME</strong> vs <strong id="card2-name-2">CHALLENGER 2 NAME</strong></h4>
 			   		<hr class="card-top-hr">
 			   		<div id="winner-name-2">CHALLENGER 1 NAME</div>
 			    	<p id="winner-tag">WINNER</p>
@@ -97,7 +97,7 @@
 			    	<button id="close-btn">X</button>
 			    </article>
 			    <article class="cards" id="bottom-card">
-			    	<h4 class="vs-title"><strong id= "name-1-input">CHALLENGER 1 NAME</strong> vs <strong id="name-2-input">CHALLENGER 2 NAME</strong></h4>
+			    	<h4 class="vs-title"><strong id= "card3-name-1">CHALLENGER 1 NAME</strong> vs <strong id="card3-name-2">CHALLENGER 2 NAME</strong></h4>
 			    	<hr class="card-top-hr">
 			    	<div id="winner-name-3">CHALLENGER 1 NAME</div>
 			    	<p id="winner-tag">WINNER</p>
@@ -108,6 +108,6 @@
 				</article>
 		    </section>
 		  </main>
-		  <script src="number-test.js"></script>
+		  <script src="main.js"></script>
 		</body>
 	</html>
