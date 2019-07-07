@@ -58,7 +58,7 @@ button {
 	background-color: #6E6E6E;
 	color: #FFFFFF;
 	font-size: 20px;
-	font-weight:600;
+	font-weight: 700;
 }
 
 .left-side {
@@ -198,6 +198,10 @@ button {
 	height: 245px;
 	margin: 20px 50px;
 	background-color: #FFF;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
 
 }
 
@@ -207,6 +211,7 @@ button {
     width: 565px;
     margin-left: 15px;
     border: 0 none;
+
 }
 
 .card-bottom-hr {
@@ -216,6 +221,7 @@ button {
     margin-top: 20px;
     margin-left: 15px;
     border: 0 none;
+
 }
 
 .vs-title {
@@ -235,18 +241,15 @@ button {
  #winner-name-3 {
  	font-size: 35px;
  	font-weight: 700;
- 	text-align: center;
  	margin-top: 25px;
  }
 
  #winner-tag {
  	font-size: 35px;
- 	text-align: center;
  }
 
- #num-of-guesses,
- #num-of-minutes {
- 	display: inline-block;
+ 
+ .bottom-of-results-card {
  	font-size: 20px;
  	margin-top: 13px;
  }
