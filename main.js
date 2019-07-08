@@ -57,10 +57,12 @@ document.getElementById("submit-button").addEventListener("click", ()=>{
 
 //Reset Button Trigger
 document.getElementById("reset-button").addEventListener("click", ()=>{
+	resetTheForm()
 })
 
 //Clear Button Trigger
 document.getElementById("clear-button").addEventListener("click", ()=>{
+	clearTheForm()
 })
 
 //On Form Change
@@ -68,8 +70,9 @@ var allChallengerInputs = document.querySelectorAll(".all-challenger-inputs")
 allChallengerInputs.forEach(challengerInput => {
     challengerInput.addEventListener("change",()=>{
         console.log(challengerInput)
-	checkIfWeShouldEnableTheSubmitButton()
-	checkIfWeShouldEnableTheClearButton()
+	checkIfWeShouldEnableTheSubmitButton();
+	checkIfWeShouldEnableTheClearButton();
+	checkIfWeShouldEnableTheResetButton();
     })
 })
 
@@ -139,6 +142,19 @@ function checkIfWeShouldEnableTheClearButton() {
 		enableOrDisableClearButton(false)
 	}}
 
+function checkIfWeShouldEnableTheResetButton() {
+	var name = getName1();
+    var name2 = getName2();
+    var guess1 = getGuess1();
+	var guess2 = getGuess2();
+	var minField = getMinRange();
+	var maxField = getMaxRange();
+	if (name != "" || name2 != "" || guess1 != "" || guess2 != "" || minField != "" || maxField != ""){ 
+		enableOrDisableResetButton(true)
+	} else {
+		enableOrDisableResetButton(false)
+	}}
+
 	
 function checkIfWeShouldEnableTheUpdateButton(){
 	console.log("check if update button enable ran")
@@ -206,13 +222,22 @@ function updateButtonEnable(){
 }
 
 //Clear Button disabler
-function clearButtonEnable () {
+function clearButtonEnable() {
 	if(document.querySelector("input").value.length != 0) {
 		document.querySelector("#clear-button").disabled = true; 
 		} else {
 			document.querySelector("#clear-button").disabled = false;
 		}
 	}
+
+//Reset Button disabler
+function resetButtonEnable() {
+	if(document.querySelector("input").value.length !=0) {
+		document.querySelector("#reset-button").disabled = true;
+	} else {
+		document.querySelector("#reset-button").disabled = false;
+	}
+}
 
 
 // Name Input Challenger 1
@@ -295,6 +320,44 @@ function enableOrDisableClearButton(clearButtonShouldBeDisabled) {
 		clearButtonElement.disabled = true
 	}
 }
+
+function enableOrDisableResetButton(resetButtonShouldBeDisabled) {
+	console.log("enable or disable reset function working")
+	var resetButtonElement = document.querySelector("#reset-button")
+	if (resetButtonShouldBeDisabled == true) {
+		resetButtonElement.disabled = false
+	} else {
+		resetButtonElement.disabled = true
+	}
+}
+
+// function clearTheForm(clearFormButton) {
+// 	console.log("Clear button function working")
+// 	var clearFormButton = document.querySelector("#clear-button")
+// 	var name = getName1();
+//     var name2 = getName2()
+//     var guess1 = getGuess1()
+// 	var guess2 = getGuess2()
+// 	var allFormFields = name, name2, guess1, guess2
+// 	for(i=0; i<allFormFields.length; i ++)
+// 	allFormFields[i].value = ""
+// }
+
+// function resetTheForm(resetFormButton) {
+// 	console.log("reset button function working")
+// 	var resetFormButton = document.querySelector("#reset-button")
+// 	var name = getName1();
+//     var name2 = getName2();
+//     var guess1 = getGuess1();
+// 	var guess2 = getGuess2();
+// 	var minField = getMinRange();
+// 	var maxField = getMaxRange();
+	
+// 	var allFormFields = name, name2, guess1, guess2
+// 	for(i=0; i<allFormFields.length; i ++)
+// 	allFormFields[i].value = ""
+// }
+
 
 
 /****************RIGHT SIDE CARDS*********************/
