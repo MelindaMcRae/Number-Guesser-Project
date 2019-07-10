@@ -1,42 +1,37 @@
-/************* Global Variables/Auto-Execute*****/
-// var submitButton = document.querySelector("#submit-button");
-// var guessInput1 = document.getElementById("guess-input-1");
-// var guessInput2 = document.getElementById("guess-input-2").value;
-// var minInput = document.querySelector("#min-input");
-// var maxInput = document.querySelector("#max-input");
-// var updateButton = document.querySelector("#update-button");
-// var minNumber = document.querySelector("#min-number");
-// var maxNumber = document.querySelector("#max-number");
+/************* Global Variables*********/
 var global_RandomNumber;
 /*************** Triggers/Event Clicks **********/
  
 //Update Button Trigger
 document.getElementById("update-button").addEventListener("click", ()=>{
-    var minRange = getMinRange()
-    var maxRange = getMaxRange()
-    setMaxRangeElement(maxRange)
-    setMinRangeElement(minRange)
-    global_RandomNumber = getRandom(minRange, maxRange)
-    console.log(global_RandomNumber)
-    // buttonEnable()
+    var minRange = getMinRange();
+    var maxRange = getMaxRange();
+    setMaxRangeElement(maxRange);
+    setMinRangeElement(minRange);
+    global_RandomNumber = getRandom(minRange, maxRange);
+    console.log(global_RandomNumber);
+    document.querySelectorAll(".guess-input").forEach(input =>{
+        input.min = minRange;
+        input.max = maxRange;
+    })
 })
 
 //Submit Button Trigger
 document.getElementById("submit-button").addEventListener("click", ()=>{
-    var name1 = getName1()
-    setName1(name1)
-    var name2 = getName2()
-    setName2(name2)
-    var guess1 = getGuess1()
-    setGuess1(guess1)
-    var guess2 = getGuess2()
-    setGuess2(guess2)
+    var name1 = getName1();
+    setName1(name1);
+    var name2 = getName2();
+    setName2(name2);
+    var guess1 = getGuess1();
+    setGuess1(guess1);
+    var guess2 = getGuess2();
+    setGuess2(guess2);
 
     //card one result changes
-    var name1Card1 = getName1()
-    setCard1Name1(name1Card1)
-    var name2Card1 = getName2()
-    setCard1Name2(name2Card1)
+    var name1Card1 = getName1();
+    setCard1Name1(name1Card1);
+    var name2Card1 = getName2();
+    setCard1Name2(name2Card1);
 
     // //card two result changes
     // var name1Card2 = getName1()
@@ -45,31 +40,39 @@ document.getElementById("submit-button").addEventListener("click", ()=>{
     // setCard2Name2(name2Card2)
 
     //card three result changes
-    var name1Card3 = getName1()
-    setCard3Name1(name1Card3)
-    var name2Card3 = getName2()
-    setCard3Name2(name2Card3)
-    var maxRangeLabel = document.querySelector("#max-number")
-    var minRangeLabel = document.querySelector("#min-number")
-    console.log("get random ran")
-    displayGuessResults(guess1, guess2)
+    var name1Card3 = getName1();
+    setCard3Name1(name1Card3);
+    var name2Card3 = getName2();
+    setCard3Name2(name2Card3);
+    var maxRangeLabel = document.querySelector("#max-number");
+    var minRangeLabel = document.querySelector("#min-number");
+    displayGuessResults(guess1, "challenger1");
+    displayGuessResults(guess2, "challenger2");
+    console.log(guess1, guess2)
 })
 
 //Reset Button Trigger
 document.getElementById("reset-button").addEventListener("click", ()=>{
-	resetTheForm()
+document.querySelectorAll("input").forEach(input=>{
+    input.value = ""
+})
+global_RandomNumber = ""
 })
 
 //Clear Button Trigger
 document.getElementById("clear-button").addEventListener("click", ()=>{
-	clearTheForm()
+console.log(document.querySelectorAll(".guess-input"))
+document.querySelectorAll(".guess-input").forEach(input=>{
+    console.log(input)
+    input.value = ""
+})
+
 })
 
 //On Form Change
 var allChallengerInputs = document.querySelectorAll(".all-challenger-inputs")
 allChallengerInputs.forEach(challengerInput => {
     challengerInput.addEventListener("change",()=>{
-        console.log(challengerInput)
 	checkIfWeShouldEnableTheSubmitButton();
 	checkIfWeShouldEnableTheClearButton();
 	checkIfWeShouldEnableTheResetButton();
@@ -78,7 +81,6 @@ allChallengerInputs.forEach(challengerInput => {
 
 var allRangeInputs = document.querySelectorAll(".all-range-inputs")
 allRangeInputs.forEach(rangeInput => {
-	console.log("thisisrunning")
 	rangeInput.addEventListener("change",()=>{
 		checkIfWeShouldEnableTheUpdateButton()
 	})
@@ -88,54 +90,79 @@ allRangeInputs.forEach(rangeInput => {
 /**************** Actions/Funtions **************/
 
 function getRandom(minInput, maxInput) {
-    console.log(minInput, maxInput, "input") 
     return Math.ceil(Math.random() * (maxInput - minInput) + minInput)
 }  
 
-function displayGuessResults(guess1, guess2) {
-    console.log(guess1, guess2)	
-    if (guess1 == global_RandomNumber) 
-        {
-            alert("BOOM")
-            return;
-        }
-    
-        else if (guess1 > global_RandomNumber)
-        {
-            alert("that's too high")
-            return;
-        }
-    
-        else (guess1 < global_RandomNumber)
-        {
-            alert("that's too low")
-            return;
-        }
+
+function displayGuessResults(guess, challenger){
+    if (guess == global_RandomNumber){
+        var resultText = 'BOOM';
+    } else if (guess > global_RandomNumber){
+        var resultText = 'Too High'
+    } else {
+        var resultText = 'Too Low'
     }
+    if (challenger == 'challenger1'){
+        setChallengerOneResultElement(resultText)
+    } else {
+        setChallengerTwoResultElement(resultText)
+    }
+}
+
+// function displayGuessResults(guess1) {
+//     var guess1 = getGuess1();
+//     if (guess1 == global_RandomNumber) {
+//             setResultElement("BOOM!");
+//             return;
+//         } else if (guess1 > global_RandomNumber) {
+//             setResultElement("that's too high");
+//             return;
+//         } else (guess1 < global_RandomNumber) 
+//             setResultElement("that's too low");
+//             return;
+//         }
+
+// function displayGuessResults2(guess2) {
+//     if (guess2 == global_RandomNumber) {
+//             setResultElement("BOOM!");
+//             return;
+//         } else if (guess2 > global_RandomNumber) {
+//             setResultElement("that's too high");
+//             return;
+//         } else (guess2 < global_RandomNumber) 
+//             setResultElement("that's too low");
+//             return;
+//         }
+
+
+function setChallengerOneResultElement(resultTextVal) {
+    var resultText = document.querySelector("#challenger1-feedback")
+    resultText.innerText = resultTextVal
+}
+
+function setChallengerTwoResultElement(resultTextVal) {
+    var resultText = document.querySelector("#challenger2-feedback")
+    resultText.innerText = resultTextVal
+}
 
 function checkIfWeShouldEnableTheSubmitButton() {
     var name = getName1();
-    var name2 = getName2()
-    var guess1 = getGuess1()
-    var guess2 = getGuess2()
-    console.log(name, guess1)
+    var name2 = getName2();
+    var guess1 = getGuess1();
+    var guess2 = getGuess2();
     if  (name != "" && guess1 != ""){
-        console.log("I should be enabled")
         enableOrDisableSubmitButton(true)
     } else if (name2 != "" && guess2 != ""){
-        console.log("it should enableeeee")
         enableOrDisableSubmitButton(true)
     } else {
-        console.log ("I should be disabled")
         enableOrDisableSubmitButton(false)
-	}}
+  }}
 
 function checkIfWeShouldEnableTheClearButton() {
-	console.log("check if we should enable clear button working")
 	var name = getName1();
-    var name2 = getName2()
-    var guess1 = getGuess1()
-	var guess2 = getGuess2()
+    var name2 = getName2();
+    var guess1 = getGuess1();
+	var guess2 = getGuess2();
 	if (name != "" || name2 != "" || guess1 != "" || guess2 != ""){ 
 		enableOrDisableClearButton(true)
 	} else {
@@ -154,10 +181,8 @@ function checkIfWeShouldEnableTheResetButton() {
 	} else {
 		enableOrDisableResetButton(false)
 	}}
-
 	
 function checkIfWeShouldEnableTheUpdateButton(){
-	console.log("check if update button enable ran")
 	var minField = getMinRange();
 	var maxField = getMaxRange();
 	if (minField != "" && maxField != ""){
@@ -167,45 +192,34 @@ function checkIfWeShouldEnableTheUpdateButton(){
 	}
 }
 
-
-
 /******************** HTML/DOM ******************/
 
 // Minimum Ranges, Top Left Box 
 function getMinRange(){
-    console.log("minRangeRan")
    var minRangeElement = document.querySelector("#min-input")
-   var minRangeElementValue = minRangeElement.value
+   var minRangeElementValue = parseInt(minRangeElement.value)
     return minRangeElementValue
 }
 
 function setMinRangeElement(minRangeVal) {
-    console.log ("min range ran element")
-    console.log(minRangeVal)
-var minRangeLabel = document.querySelector("#min-number")
-console.log(typeof minRangeLabel, minRangeLabel)
-minRangeLabel.innerText = minRangeVal
+    var minRangeLabel = document.querySelector("#min-number")
+    minRangeLabel.innerText = minRangeVal
 }
 
 // Maximum Ranges, Top Left Box
 function getMaxRange(){
-    console.log("max Range Ran")
     var maxRangeElement = document.querySelector("#max-input")
-    var maxRangeElementValue = maxRangeElement.value
+    var maxRangeElementValue = parseInt(maxRangeElement.value)
     return maxRangeElementValue
 }
 
 function setMaxRangeElement(maxRangeVal) {
-    console.log("setMaxRangeElement Ran")
-    console.log(maxRangeVal)
     var maxRangeLabel = document.querySelector("#max-number")
-    console.log(typeof maxRangeLabel, maxRangeLabel)
     maxRangeLabel.innerText = maxRangeVal
 }
 
 // Submit Button disabler
 function submitButtonEnable() {
-    console.log("Ran Button Enable")
     if(document.querySelector("#nameform1").value.length===0) { 
       document.querySelector("#submit-button").disabled = true; 
       } else { 
@@ -262,13 +276,14 @@ function getName2() {
 
 function setName2(setName2Val) {
     var name2Label = document.querySelector("#name-2-input")
-    name2Label.innerText = setName2Val   
+    name2Label.innerText = setName2Val
 }
 
 // Guess 1 from Challenger 1
 function getGuess1() {
     var guess1Element = document.querySelector("#guess-input-1")
-    var guess1ElementValue = guess1Element.value
+    var guess1ElementValue = parseInt(guess1Element.value)
+    console.log(typeof guess1ElementValue, "guess 1 type" )
     return guess1ElementValue
 }
 
@@ -277,11 +292,11 @@ function setGuess1(setGuess1Val) {
     guess1Label.innerText = setGuess1Val
 }
 
-
 // Guess 2 from Challenger 2
 function getGuess2() {
     var guess2Element = document.querySelector("#guess-input-2")
-    var guess2ElementValue = guess2Element.value
+    var guess2ElementValue = parseInt(guess2Element.value)
+    console.log(typeof guess2ElementValue, "guess2type")
     return guess2ElementValue
 }
 
@@ -289,6 +304,8 @@ function setGuess2(setGuess2Val) {
     var guess2Label = document.querySelector("#challenger2-score");
     guess2Label.innerText = setGuess2Val;
 }
+
+//Enabling and Disabling Buttons
 
 function enableOrDisableSubmitButton(submitButtonShouldBeDisabled) {
     console.log("enable or disable ran")
