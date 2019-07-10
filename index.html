@@ -2,13 +2,14 @@
 	<html> 
 		<head>
 		  <title>Number Guesser</title>
+		  <meta name="viewport" content="width=device-width, initial-scale=1">
 		  <link rel="stylesheet" type="text/css" href="styles.css">
 		  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,700&display=swap" rel="stylesheet">
 		</head>
 		<body>
 			<header>
 				<h1><strong>NUMBER</strong> GUESSER</h1>	 
-				<hr class="header-hr"><h2>ULTIMATE CHALLENGER EDITION</h2>
+				<hr class="header-hr"><h2 id="sub-tite">ULTIMATE CHALLENGER EDITION</h2> 
 			</header>
 			<main>
 				<section class="left-side">
@@ -32,22 +33,22 @@
 						<div class="forms" id="challenger1-forms">
 						  <form class="challenger-input" id="challenger1-input">
 						    <label class="name-form">Name</label>
-						    <input class="all-challenger-inputs" id="nameform1" class="name-input" type="text">
+						    <input class="all-challenger-inputs name-input" id="nameform1"  type="text">
 					    </form>
 						  <form class="challenger-input" id="guess1-form">
 						    <label class="guess-form">Guess</label>
-						    <input class="all-challenger-inputs" class="guess-input" id="guess-input-1" type="number">
+						    <input class="all-challenger-inputs guess-input" id="guess-input-1" type="number"/>
 					    </form>
 						</div>
-						<h3 class="challenger-inputs" class="left-title" id="challenger2"> Challenger 2</h3>
+						<h3 class="challenger-inputs left-title" id="challenger2"> Challenger 2</h3>
 						<div class="forms" id="challenger2-forms">
 						  <form class="challenger-inputs" id="challenger2-input">
 						    <label class="name-form">Name</label>
-						    <input class="all-challengers-inputs" id="nameform2" class="name-input" type="text">
+						    <input class="all-challengers-inputs name-input" id="nameform2" type="text">
 					    </form>
 						  <form class="challenge-input" id="guess2-form">
 						    <label class="guess-form">Guess</label>
-						    <input class="all-challenger-inputs" class="guess-input" id="guess-input-2"type="number">
+						    <input class="all-challenger-inputs guess-input" id="guess-input-2"type="number"/>
 					    </form>
 				    </div>
 				    <div class= "challenger-buttons-container">
@@ -62,14 +63,14 @@
 				    	<section id="bottom-left-container-1">
 					      <h4 id="name-1-input">Challenger 1 Name</h4>
 						    <p>current guess</p>
-						    <strong class="score-number" id="challenger1-score">#</strong>
-						    <p class="feedback" id="challenger1-feedback">that's too low</p>
+						    <strong class="score-number" id="challenger1-score">--</strong>
+						    <p class="feedback" id="challenger1-feedback">--</p>
 						 </section>
 						 <section id="bottom-left-container-2">
 					      <h4 id="name-2-input">Challenger 2 Name</h4>
 					      <p>current guess</p>
-					      <strong class="score-number" id="challenger2-score">#</strong>
-					      <p class="feedback" id="challenger2-feedback">that's too high</p>
+					      <strong class="score-number" id="challenger2-score">--</strong>
+					      <p class="feedback" id="challenger2-feedback">--</p>
 					   </section>
 					  </div>
 				    </div>
@@ -82,9 +83,11 @@
 			    	<div id="winner-name-1">CHALLENGER 1 NAME</div>
 			    	<p id="winner-tag">WINNER</p>
 			    	<hr class="card-bottom-hr">
-			    	<div id="num-of-guesses"># GUESSES</div>
-			    	<div id="num-of-minutes"># MINUTES</div>
+			    	<div class="bottom-of-results-card">
+			   			<span id="num-of-guesses"># GUESSES</span>
+			    		<span id="num-of-minutes"># MINUTES</span>
 			    	<button id="close-btn">X</button>
+			    	</div>
 			    </article>
 			    <article class="cards" id="middle-card">
 			    	<h4 class="vs-title"><strong id= "card2-name-1">CHALLENGER 1 NAME</strong> vs <strong id="card2-name-2">CHALLENGER 2 NAME</strong></h4>
@@ -92,9 +95,11 @@
 			   		<div id="winner-name-2">CHALLENGER 1 NAME</div>
 			    	<p id="winner-tag">WINNER</p>
 			   		<hr class="card-bottom-hr">
-			   		<div id="num-of-guesses"># GUESSES</div>
-			    	<div id="num-of-minutes"># MINUTES</div>
+			   		<div class="bottom-of-results-card">
+			   			<span id="num-of-guesses"># GUESSES</span>
+			    		<span id="num-of-minutes"># MINUTES</span>
 			    	<button id="close-btn">X</button>
+			    </div>
 			    </article>
 			    <article class="cards" id="bottom-card">
 			    	<h4 class="vs-title"><strong id= "card3-name-1">CHALLENGER 1 NAME</strong> vs <strong id="card3-name-2">CHALLENGER 2 NAME</strong></h4>
@@ -102,12 +107,12 @@
 			    	<div id="winner-name-3">CHALLENGER 1 NAME</div>
 			    	<p id="winner-tag">WINNER</p>
 			    	<hr class="card-bottom-hr">
-			    	<div id="num-of-guesses"># GUESSES</div>
-			    	<div id="num-of-minutes"># MINUTES</div>
+			    	<div class="bottom-of-results-card"><span id="num-of-guesses"># GUESSES</span>
+			    	<span id="num-of-minutes"># MINUTES</span>
 			    	<button id="close-btn">X</button>
+			    </div>
 				</article>
 		    </section>
 		  </main>
 		  <script src="main.js"></script>
 		</body>
-	</html>
