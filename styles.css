@@ -30,8 +30,6 @@ h2 {
 	position: absolute;
 	text-align: center;
 	top: 94px;
-	width: 30%%;
-	width: max-content%;
 }
 
 .header-hr {
@@ -47,12 +45,10 @@ h2 {
 
 main {
 	display: flex;
-	flex-direction: row;
-	justify-content: space-around;
 	color: #404041
 }
 
-/*************LEFT SIDE**************/
+/***************LEFT SIDE*************************/
 input {
 	height: 35px;
 	font-size: 25px;
@@ -96,7 +92,7 @@ button:hover {
 	justify-content: space-between;
 }
 
-/************TOP LEFT BOX*********/
+/************* Top Left Box **********/
 #left-art {
 	display: flex;
 	align-items: flex-end;
@@ -126,11 +122,7 @@ button:hover {
 	margin-top: 6%;
 }
 
-#nameform1,
-#nameform2 {
-	width: 350px;
-}
-
+/*********** Middle Left Box **********/
 
 .challenger-buttons {
   width: 28%;
@@ -143,6 +135,27 @@ button:hover {
 	justify-content: space-between;
 	margin-top: 6%;
 }
+
+.guess-form,
+.name-form {
+	display: flex;
+	flex-direction: column;
+}
+
+#nameform1,
+#nameform2 {
+	width: 350px;
+}
+
+#min-number,
+#max-number {
+	text-decoration: underline;
+}
+
+#name-1-input,
+#name-2-input {
+  padding: 0 10px;
+ }
 
 #challenger1 {
 	margin-top: 10px;
@@ -165,15 +178,24 @@ button:hover {
 	width:100%;
 }
 
-.guess-form,
-.name-form {
-	display: flex;
-	flex-direction: column;
+#update-button[disabled],
+#submit-button[disabled],
+#reset-button[disabled],
+#clear-button[disabled] {
+  background-color: #D0D2D3;
 }
+
+/*********** Bottom Left Box ***********/
 
 #bottom-left-container {
 	display: flex;
 	justify-content: space-around;
+}
+
+#bottom-left-container-1 {
+   padding-right: 103px;
+   border-right: solid;
+   border-color: #D0D2D3;
 }
 
 #bottom-left-container-1,
@@ -195,18 +217,6 @@ button:hover {
 	font-size: 25px
 }
 
-#update-button[disabled],
-#submit-button[disabled],
-#reset-button[disabled],
-#clear-button[disabled] {
-  background-color: #D0D2D3;
-}
-
-#min-number,
-#max-number {
-	text-decoration: underline;
-}
-
 /**********RIGHT SIDE*********/
 
 #right-side {
@@ -216,7 +226,6 @@ button:hover {
 
 .cards {
 	border: #BCBCBC solid 2px;
-	height: 245px;
 	margin: 20px 50px;
 	background-color: #FFF;
 
@@ -242,14 +251,9 @@ button:hover {
 	justify-content: space-around;
 	font-size: 18px;
 	font-weight: 300;
-	height: 30px;
+	height: 60px;
 	padding-top:10px;
 }
- 
- #name-1-input,
- #name-2-input {
- 	padding: 0 10px;
- }
 
  #winner-name-1,
  #winner-name-2,
@@ -282,8 +286,8 @@ button:hover {
 
  #close-btn {
  	border-radius: 50%;
- 	font-size: 170%px;
  	color: #D0D2D3;
+ 	float:right;
  }
 
  #bottom-of-results-card {
@@ -294,32 +298,40 @@ button:hover {
 
 /************************ Media Queries ************************/
 
- @media only screen and (max-width: 1160px) {
-
-   main  {
- 		display: flex;
+@media only screen and (max-width: 1160px) {
+  main  {
+ 	  display: flex;
  		flex-direction: column;
- 	}
- 	  label.guess-form,
+  }
+
+ 	label.guess-form,
 	  .guess-input {
-		  margin-left: -15%;
+	   margin-left: -15%;
 	}
 
-	 h2 {
-		width: 50%;
+	h2 {
+	  width: 50%;
+	}
+
+	header {
+	  width: 104%;
 	}
 
   .left-side {
 	  width:100%;
   }
 
-  #right-side {
-	  width: 100%;
+  .forms {
+	  flex-direction: column;
+	}
+
+  .vs-title {
+    font-size: 17px;
   }
 
-	.forms {
-		flex-direction: column;
-	}
+  #right-side {
+	  width: 104%;
+  }
 
 	#update-button {
 		width: 30%;
@@ -334,17 +346,23 @@ button:hover {
 		width: 100%;
 	}
 
-  .vs-title {
-    font-size: 17px;
-  }
-
 @media only screen and (max-width: 720px) {
 
 	h1 {
 		font-size: 331%;
 	}
 	h2 {
-		font-size: 128%;
+		font-size: 104%;
+		width: 53%;
+	}
+
+	header,
+	#right-side, {
+		width: 103.25%;
+	}
+
+	#sub-title {
+		margin-top: 20px;
 	}
 
 	#winner-name-1,
@@ -356,6 +374,21 @@ button:hover {
   #bottom-left-container {
 	  display: flex;
 	  flex-direction: column;
+  }
+
+  #bottom-left-container-1 {
+  	border-right: none;
+	  border-bottom: solid;
+	  border-color: #D0D2D3;
+	  padding-right: 0px;
+  }
+
+  #challenger1-feedback {
+  	margin-bottom: 30px;
+  }
+
+  #name-2-input {
+  	margin-top: 30px;
   }
 
   }
@@ -398,21 +431,9 @@ button:hover {
 	  width:100%;
   }
 
-  #right-side {
-	  width: 104%;
-  }
-
 	.left-art {
 		margin-left: 1%;
 		margin-right: 1%;
-	}
-
-	#submit-button,
-	#reset-button,
-	#clear-button {
-		width: 100%;
-		font-size:105%;
-		margin-bottom: 2%;
 	}
 
 	.challenger-buttons-container {
@@ -421,23 +442,7 @@ button:hover {
 		justfify-content: space-bet;
 	}
 
-  #bottom-left-container {
-	  display: flex;
-	  flex-direction: column;
-  }
-
-  #bottom-left-container-1{
-	  border-bottom:solid;
-	  border-color: #D0D2D3;
-	  padding-bottom: 4%;
-	  padding-top: 3%;
-  }
-
-  #bottom-left-container-2 {
-	  padding-top:4%;
-  }
-
-  .vs-title {
+	.vs-title {
 	  margin-top:4%;
 	  display: flex;
 	  flex-direction: column;
@@ -454,6 +459,37 @@ button:hover {
 
   .cards {
 	  margin: 12px 18px 0px 12px;
+  }
+
+	#submit-button,
+	#reset-button,
+	#clear-button {
+		width: 100%;
+		font-size:105%;
+		margin-bottom: 2%;
+	}
+
+ #right-side {
+	  width: 104%;
+	  height: 875px;
+  }
+
+  #bottom-left-container {
+	  display: flex;
+	  flex-direction: column;
+  }
+
+  #bottom-left-container-1 {
+  	border-right: none;
+	  border-bottom: solid;
+	  border-color: #D0D2D3;
+	  padding-bottom: 4%;
+	  padding-top: 3%;
+	  padding-right: 0px;
+  }
+
+  #bottom-left-container-2 {
+	  padding-top:4%;
   }
 
   #winner-tag {
