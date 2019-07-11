@@ -13,9 +13,9 @@ Number Guesser is a project that was assigned to students at Turing. We were giv
 ## Screenshots of the Comps
 ### Desktop Comp
 ![image](https://user-images.githubusercontent.com/50784336/61016789-21b81700-a34e-11e9-901e-f0c325528156.png)
+
 ### Mobile Device Comp
 ![image](https://user-images.githubusercontent.com/50784336/61016839-53c97900-a34e-11e9-9e6a-c859f35ccebf.png)
-
 
 ## Screenshots of the Recreations
 ### Desktop Recreation
