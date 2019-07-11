@@ -1,38 +1,474 @@
 * {
 	font-family: 'Open Sans', sans-serif;
-	border: red solid 1px;
 	margin: 0;
 }
 
+/*************HEADER****************/
+
 header {
+	align-items: center;
 	background: #404041;
 	display: flex;
 	flex-direction: column;
-	align-items: center;
 	height: 155px;
 }
 
 h1 {
 	color: #DD1972;
+	font-size: 424%;
 	font-weight: 300;
-	font-size: 70px;
 	padding-top: 15px;
-}
-
-hr {
-	background-color: white;
-	height: 1px;
-	width: 624px;
-	margin-top: 15px;
 }
 
 h2 {
-	color: #fff;
-	font-weight: 300;
-	width: 38%;
-	text-align: center;
-	padding-top: 15px;
-	position: absolute;
-	top: 94px;
 	background-color: #404041;
+	color: #fff;
+	font-size: 150%;
+	font-weight: 300;
+	height:5%;
+	padding-top: 1%;
+	position: absolute;
+	text-align: center;
+	top: 94px;
+	width: 30%%;
+	width: max-content%;
 }
+
+.header-hr {
+	background-color: white;
+	height: 1px;
+	margin-top: 15px;
+	width: 624px;
+}
+
+
+
+/********************MAIN***********************/
+
+main {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	color: #404041
+}
+
+/*************LEFT SIDE**************/
+input {
+	height: 35px;
+	font-size: 25px;
+	width: 100%;
+	border: solid;
+	border-color: #D0D2D3;
+}
+
+button {
+	background-color: #6E6E6E;
+	color: #FFFFFF;
+	font-size: 20px;
+	font-weight:600;
+}
+
+button:hover {
+	background-color: #DD1972;
+}
+
+.left-side {
+	background-color: #F6F5F8;
+	border: #BCBCBC solid 2px;
+	display: flex;
+	flex-direction: column;
+	font-size: 120%;
+	padding: 1.5%;
+	width: 50%;
+}
+
+.left-art {
+	background-color: #FFFFFF;
+	border: #D0D2D3 solid 2px;
+	margin-bottom: 20px;
+	margin-left:30px;
+	margin-right: 30px;
+	padding: 10px 35px 25px 20px;;
+}
+
+.forms {
+	display: flex;
+	justify-content: space-between;
+}
+
+/************TOP LEFT BOX*********/
+#left-art {
+	display: flex;
+	align-items: flex-end;
+}
+
+#min-range,
+#max-range {
+	display:flex;
+	flex-direction: column;
+	width: 100%;
+}
+
+#min-input,
+#max-input {
+	width: 100%;
+}
+
+#max-range-form {
+	margin-left: 15px;
+	margin-right: 15px;
+}
+
+#update-button {
+	border-radius: 28px;
+	width: 20%;
+	height: 0%;
+	margin-top: 6%;
+}
+
+#nameform1,
+#nameform2 {
+	width: 350px;
+}
+
+
+.challenger-buttons {
+  width: 28%;
+  border-radius: 28px;
+  padding: 6px;
+}
+
+.challenger-buttons-container {
+	display: flex;
+	justify-content: space-between;
+	margin-top: 6%;
+}
+
+#challenger1 {
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+#challenger2 {
+	margin-top: 40px;
+	margin-bottom: 10px;
+}
+
+#challenger-box {
+	background-color: #FFFFFF;
+	padding: 15px
+}
+
+#guess2-form,
+#guess1-form {
+	margin-left: 15%;
+	width:100%;
+}
+
+.guess-form,
+.name-form {
+	display: flex;
+	flex-direction: column;
+}
+
+#bottom-left-container {
+	display: flex;
+	justify-content: space-around;
+}
+
+#bottom-left-container-1,
+#bottom-left-container-2 {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+#challenger1-score,
+#challenger2-score {
+	color: #DD1972;
+	font-weight: 700;
+	font-size: 90px;
+}
+
+#challenger1-feedback,
+#challenger2-feedback {
+	font-size: 25px
+}
+
+#update-button[disabled],
+#submit-button[disabled],
+#reset-button[disabled],
+#clear-button[disabled] {
+  background-color: #D0D2D3;
+}
+
+#min-number,
+#max-number {
+	text-decoration: underline;
+}
+
+/**********RIGHT SIDE*********/
+
+#right-side {
+	background-color: #D1D2D4;
+	width:50%;
+}
+
+.cards {
+	border: #BCBCBC solid 2px;
+	height: 245px;
+	margin: 20px 50px;
+	background-color: #FFF;
+
+}
+
+.card-top-hr {
+	background-color: #F6F5F8;
+	height: 3px;
+  width: 97%;
+  border: 0 none;
+}
+
+.card-bottom-hr {
+	background-color: #F6F5F8;
+	height: 3px;
+  width: 97%;
+  margin-top: 20px;
+  border: 0 none;
+}
+
+.vs-title {
+	display: flex;
+	justify-content: space-around;
+	font-size: 18px;
+	font-weight: 300;
+	height: 30px;
+	padding-top:10px;
+}
+ 
+ #name-1-input,
+ #name-2-input {
+ 	padding: 0 10px;
+ }
+
+ #winner-name-1,
+ #winner-name-2,
+ #winner-name-3 {
+ 	font-size: 260%;
+ 	font-weight: 700;
+ 	text-align: center;
+ 	margin-top: 25px;
+ }
+
+ #winner-tag {
+ 	font-size: 250%;
+ 	text-align: center;
+ }
+
+ #num-of-guesses,
+ #num-of-minutes {
+ 	display: inline-block;
+ 	font-size: 20px;
+ 	margin-top: 13px;
+ }
+
+ #num-of-guesses {
+ 	margin-left: 2%;
+ }
+
+  #num-of-minutes {
+ 	margin-left: 10%;
+ }
+
+ #close-btn {
+ 	border-radius: 50%;
+ 	font-size: 170%px;
+ 	color: #D0D2D3;
+ }
+
+ #bottom-of-results-card {
+ 	display: flex;
+ 	justify-content: 
+ }
+
+
+/************************ Media Queries ************************/
+
+ @media only screen and (max-width: 1160px) {
+
+   main  {
+ 		display: flex;
+ 		flex-direction: column;
+ 	}
+ 	  label.guess-form,
+	  .guess-input {
+		  margin-left: -15%;
+	}
+
+	 h2 {
+		width: 50%;
+	}
+
+  .left-side {
+	  width:100%;
+  }
+
+  #right-side {
+	  width: 100%;
+  }
+
+	.forms {
+		flex-direction: column;
+	}
+
+	#update-button {
+		width: 30%;
+	}
+	#max-range-form {
+		margin-right: 0px;
+		margin-left: 0px;
+	}
+
+	#nameform1,
+	#nameform2 {
+		width: 100%;
+	}
+
+  .vs-title {
+    font-size: 17px;
+  }
+
+@media only screen and (max-width: 720px) {
+
+	h1 {
+		font-size: 331%;
+	}
+	h2 {
+		font-size: 128%;
+	}
+
+	#winner-name-1,
+	#winner-name-2,
+	#winner-name-3 {
+		font-size: 232%;
+	}
+
+  #bottom-left-container {
+	  display: flex;
+	  flex-direction: column;
+  }
+
+  }
+
+@media only screen and (max-width: 320px) {
+
+	main {
+		display: flex;
+		flex-direction: column;
+		width: 189%;
+		}
+
+	h1 {
+		font-size:250%;
+	}
+
+	header {
+		width: 196%;
+		height: 100px;
+	}
+
+	h2 {
+		font-size: 76%;
+		width: 185px;
+		top: 60px;
+		height: 4%;
+	}
+
+	label.guess-form,
+	.guess-input {
+		margin-left: -74px;
+	}
+
+	.header-hr {
+		width: 351px;
+		margin-top: 1px;
+	}
+
+	.left-side {
+	  width:100%;
+  }
+
+  #right-side {
+	  width: 104%;
+  }
+
+	.left-art {
+		margin-left: 1%;
+		margin-right: 1%;
+	}
+
+	#submit-button,
+	#reset-button,
+	#clear-button {
+		width: 100%;
+		font-size:105%;
+		margin-bottom: 2%;
+	}
+
+	.challenger-buttons-container {
+		display:flex;
+		flex-direction:column;
+		justfify-content: space-bet;
+	}
+
+  #bottom-left-container {
+	  display: flex;
+	  flex-direction: column;
+  }
+
+  #bottom-left-container-1{
+	  border-bottom:solid;
+	  border-color: #D0D2D3;
+	  padding-bottom: 4%;
+	  padding-top: 3%;
+  }
+
+  #bottom-left-container-2 {
+	  padding-top:4%;
+  }
+
+  .vs-title {
+	  margin-top:4%;
+	  display: flex;
+	  flex-direction: column;
+	  font-size: 16px;
+	  text-align:center;
+  }
+
+  .card-top-hr { 
+	  margin-top:30px;
+	  margin-left: 13px;
+	  width:92%;
+
+  }
+
+  .cards {
+	  margin: 12px 18px 0px 12px;
+  }
+
+  #winner-tag {
+ 	  font-size:30px;
+ 	  margin-top: -8px;
+ 	  margin-bottom: -6px;
+  } 
+
+  #winner-name-1,
+  #winner-name-2,
+  #winner-name-3 {
+	  font-size: 28px;
+	  margin-top:12px;
+
+}
+
+}
+
