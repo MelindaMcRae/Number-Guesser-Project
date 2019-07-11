@@ -1,49 +1,47 @@
 * {
 	font-family: 'Open Sans', sans-serif;
-	/*border: red solid .5px;*/
 	margin: 0;
 }
 
 /*************HEADER****************/
 
-
-
-
 header {
+	align-items: center;
 	background: #404041;
 	display: flex;
 	flex-direction: column;
-	align-items: center;
 	height: 155px;
 }
 
 h1 {
 	color: #DD1972;
-	font-weight: 300;
 	font-size: 424%;
+	font-weight: 300;
 	padding-top: 15px;
+}
+
+h2 {
+	background-color: #404041;
+	color: #fff;
+	font-size: 150%;
+	font-weight: 300;
+	height:5%;
+	padding-top: 1%;
+	position: absolute;
+	text-align: center;
+	top: 94px;
+	width: 30%%;
+	width: max-content%;
 }
 
 .header-hr {
 	background-color: white;
 	height: 1px;
-	width: 624px;
 	margin-top: 15px;
+	width: 624px;
 }
 
-h2 {
-	color: #fff;
-	font-weight: 300;
-	font-size: 150%;
-	width: 30%%;
-	text-align: center;
-	padding-top: 1%;
-	position: absolute;
-	top: 94px;
-	background-color: #404041;
-	width: max-content%;
-	height:7%;
-}
+
 
 /********************MAIN***********************/
 
@@ -75,22 +73,22 @@ button:hover {
 }
 
 .left-side {
+	background-color: #F6F5F8;
 	border: #BCBCBC solid 2px;
 	display: flex;
 	flex-direction: column;
-	background-color: #F6F5F8;
-	width: 50%;
-	padding: 1.5%;
 	font-size: 120%;
+	padding: 1.5%;
+	width: 50%;
 }
 
 .left-art {
 	background-color: #FFFFFF;
-	padding: 10px 35px 25px 20px;;
-	margin-bottom: 20px;
-	margin-right: 30px;
-	margin-left:30px;
 	border: #D0D2D3 solid 2px;
+	margin-bottom: 20px;
+	margin-left:30px;
+	margin-right: 30px;
+	padding: 10px 35px 25px 20px;;
 }
 
 .forms {
@@ -128,9 +126,6 @@ button:hover {
 	margin-top: 6%;
 }
 
-/**********MIDDLE LEFT BOX*******/
-
-/**/
 #nameform1,
 #nameform2 {
 	width: 350px;
@@ -166,8 +161,8 @@ button:hover {
 
 #guess2-form,
 #guess1-form {
-	width:100%;
 	margin-left: 15%;
+	width:100%;
 }
 
 .guess-form,
@@ -297,25 +292,35 @@ button:hover {
  }
 
 
-
+/************************ Media Queries ************************/
 
  @media only screen and (max-width: 1160px) {
- 	main  {
+
+   main  {
  		display: flex;
  		flex-direction: column;
  	}
+ 	  label.guess-form,
+	  .guess-input {
+		  margin-left: -15%;
+	}
 
-.left-side {
-	width:100%;
-}
+	 h2 {
+		width: 50%;
+	}
 
-#right-side {
-	width: 100%;
-}
+  .left-side {
+	  width:100%;
+  }
+
+  #right-side {
+	  width: 100%;
+  }
 
 	.forms {
 		flex-direction: column;
 	}
+
 	#update-button {
 		width: 30%;
 	}
@@ -329,25 +334,12 @@ button:hover {
 		width: 100%;
 	}
 
-	label.guess-form,
-	.guess-input {
-		margin-left: -15%;
-	}
-
-	h2 {
-		width: 50%;
-	}
-
-.vs-title {
-font-size: 17px;
-}
-
-#winner-tag {
-
-}
-
+  .vs-title {
+    font-size: 17px;
+  }
 
 @media only screen and (max-width: 720px) {
+
 	h1 {
 		font-size: 331%;
 	}
@@ -360,15 +352,13 @@ font-size: 17px;
 	#winner-name-3 {
 		font-size: 232%;
 	}
-#bottom-left-container {
-	display: flex;
-	flex-direction: column;
-}
 
-}
+  #bottom-left-container {
+	  display: flex;
+	  flex-direction: column;
+  }
 
-
-
+  }
 
 @media only screen and (max-width: 320px) {
 
@@ -377,26 +367,15 @@ font-size: 17px;
 		flex-direction: column;
 		width: 189%;
 		}
-.left-side {
-	width:100%;
-}
 
 	h1 {
 		font-size:250%;
 	}
+
 	header {
 		width: 196%;
 		height: 100px;
 	}
-	.header-hr {
-		width: 351px;
-		margin-top: 1px;
-	}
-
-#right-side {
-	width: 104%;
-}
-
 
 	h2 {
 		font-size: 76%;
@@ -404,6 +383,25 @@ font-size: 17px;
 		top: 60px;
 		height: 4%;
 	}
+
+	label.guess-form,
+	.guess-input {
+		margin-left: -74px;
+	}
+
+	.header-hr {
+		width: 351px;
+		margin-top: 1px;
+	}
+
+	.left-side {
+	  width:100%;
+  }
+
+  #right-side {
+	  width: 104%;
+  }
+
 	.left-art {
 		margin-left: 1%;
 		margin-right: 1%;
@@ -422,58 +420,55 @@ font-size: 17px;
 		flex-direction:column;
 		justfify-content: space-bet;
 	}
-label.guess-form,
-	.guess-input {
-		margin-left: -74px;
-	}
-#bottom-left-container {
-	display: flex;
-	flex-direction: column;
+
+  #bottom-left-container {
+	  display: flex;
+	  flex-direction: column;
+  }
+
+  #bottom-left-container-1{
+	  border-bottom:solid;
+	  border-color: #D0D2D3;
+	  padding-bottom: 4%;
+	  padding-top: 3%;
+  }
+
+  #bottom-left-container-2 {
+	  padding-top:4%;
+  }
+
+  .vs-title {
+	  margin-top:4%;
+	  display: flex;
+	  flex-direction: column;
+	  font-size: 16px;
+	  text-align:center;
+  }
+
+  .card-top-hr { 
+	  margin-top:30px;
+	  margin-left: 13px;
+	  width:92%;
+
+  }
+
+  .cards {
+	  margin: 12px 18px 0px 12px;
+  }
+
+  #winner-tag {
+ 	  font-size:30px;
+ 	  margin-top: -8px;
+ 	  margin-bottom: -6px;
+  } 
+
+  #winner-name-1,
+  #winner-name-2,
+  #winner-name-3 {
+	  font-size: 28px;
+	  margin-top:12px;
+
 }
-
-#bottom-left-container-1{
-	border-bottom:solid;
-	border-color: #D0D2D3;
-	padding-bottom: 4%;
-	padding-top: 3%;
-}
-
-#bottom-left-container-2 {
-	padding-top:4%;
-}
-
-.vs-title {
-	margin-top:4%;
-	display: flex;
-	flex-direction: column;
-	font-size: 16px;
-	text-align:center;
-}
-
-.card-top-hr { 
-	margin-top:30px;
-	margin-left: 13px;
-	width:92%;
-
- }
-.cards {
-	margin: 12px 18px 0px 12px;
-}
- #winner-tag {
- 	font-size:30px;
- 	margin-top: -8px;
- 	margin-bottom: -6px;
- 
- }
-#winner-name-1,
-#winner-name-2,
-#winner-name-3 {
-	font-size: 28px;
-	margin-top:12px;
-
-}
-
-
 
 }
 

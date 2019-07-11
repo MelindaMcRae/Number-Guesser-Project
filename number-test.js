@@ -1,14 +1,7 @@
-/************* Global Variables/Auto-Execute*****/
-// var submitButton = document.querySelector("#submit-button");
-// var guessInput1 = document.getElementById("guess-input-1");
-// var guessInput2 = document.getElementById("guess-input-2").value;
-// var minInput = document.querySelector("#min-input");
-// var maxInput = document.querySelector("#max-input");
-// var updateButton = document.querySelector("#update-button");
-// var minNumber = document.querySelector("#min-number");
-// var maxNumber = document.querySelector("#max-number");
+
 var global_RandomNumber;
 /*************** Triggers/Event Clicks **********/
+
  
 //Update Button Trigger
 document.getElementById("update-button").addEventListener("click", ()=>{
@@ -18,7 +11,7 @@ document.getElementById("update-button").addEventListener("click", ()=>{
     setMinRangeElement(minRange)
     global_RandomNumber = getRandom(minRange, maxRange)
     console.log(global_RandomNumber)
-    // buttonEnable()
+   
 })
 
 //Submit Button Trigger
@@ -38,11 +31,6 @@ document.getElementById("submit-button").addEventListener("click", ()=>{
     var name2Card1 = getName2()
     setCard1Name2(name2Card1)
 
-    // //card two result changes
-    // var name1Card2 = getName1()
-    // setCard2Name1(name1Card2)
-    // var name2Card2 = getName2()
-    // setCard2Name2(name2Card2)
 
     //card three result changes
     var name1Card3 = getName1()
@@ -71,6 +59,8 @@ allChallengerInputs.forEach(challengerInput => {
     checkIfWeShouldEnableTheSubmitButton()
     })
 })
+
+
 
 /**************** Actions/Funtions **************/
 
