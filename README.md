@@ -20,10 +20,13 @@ Number Guesser is a project that was assigned to students at Turing. We were giv
 ## Screenshots of the Recreations
 ### Desktop Recreation
 ![image](https://user-images.githubusercontent.com/50784336/61018497-4fa05a00-a354-11e9-975d-8b8af7772dcd.png)
+![image](https://user-images.githubusercontent.com/50784336/61019914-174f4a80-a359-11e9-976e-501732a09925.png)
 
 ### Mobile Recreation
 ![image](https://user-images.githubusercontent.com/50784336/61016997-e833db80-a34e-11e9-9ce2-c09465d391df.png)
+![image](https://user-images.githubusercontent.com/50784336/61019683-4a450e80-a358-11e9-89a7-6b8e53d0093f.png)
 ![image](https://user-images.githubusercontent.com/50784336/61017409-5036f180-a350-11e9-9349-f6e2cade5c03.png)
+![image](https://user-images.githubusercontent.com/50784336/61019717-647eec80-a358-11e9-8d0e-bd75dbd20093.png)
 ![image](https://user-images.githubusercontent.com/50784336/61017421-604ed100-a350-11e9-8300-347ccf2f0cb9.png)
 
 ## Features
